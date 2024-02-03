@@ -1,11 +1,11 @@
-import { EThemeApp } from './theme-provider/types';
-import { useTheme } from './theme-provider/use-theme';
 import Moon from '@/shared/assets/moon.svg?react';
 import Sun from '@/shared/assets/sun.svg?react';
 import { Button } from '@/shared/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/shared/ui/dropdown-menu';
+import { EThemeApp } from '@/shared/ui/theme-provider/types';
+import { useTheme } from '@/shared/ui/theme-provider/use-theme';
 
-export function ModeToggle() {
+export function ThemeToggle() {
 	const { setTheme } = useTheme();
 
 	return (

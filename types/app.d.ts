@@ -1,5 +1,10 @@
 declare global {
 	/**
+	 * Custom utility types
+	 */
+	export type Nullable<T> = T | null;
+
+	/**
 	 * Shared kernel
 	 */
 
@@ -10,8 +15,8 @@ declare global {
 	 * and use it in @/shared/model/hooks.ts
 	 */
 
-	declare type AppRootState = import('../src/app/appStore').AppRootState;
-	declare type AppDispatch = import('../src/app/appStore').AppDispatch;
+	declare type AppRootState = import('../src/app/app-store').AppRootState;
+	declare type AppDispatch = import('../src/app/app-store').AppDispatch;
 }
 
 export {};
