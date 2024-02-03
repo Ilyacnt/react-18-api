@@ -1,5 +1,5 @@
-import './App.css';
-import { useGetPostsQuery } from './api/rootApi';
+import { useGetPostsQuery } from './shared/api/rootApi';
+import { Input } from './shared/ui/input';
 
 function App() {
 	const { data, isLoading } = useGetPostsQuery();
@@ -8,13 +8,12 @@ function App() {
 		return <div>Loading</div>;
 	}
 
-	console.log(import.meta.env);
-
 	return (
 		<div>
 			{data?.map(post => (
 				<div key={post.id}>{post.title}</div>
 			))}
+			<Input placeholder='Email' />
 		</div>
 	);
 }
