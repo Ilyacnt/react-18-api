@@ -21,7 +21,13 @@ export function PagesNavigation() {
 						className={navigationMenuTriggerStyle()}
 						asChild
 					>
-						<Link to='/posts'>Posts</Link>
+						<Link to='/posts-deffered'>Posts (deffered)</Link>
+					</NavigationMenuLink>
+					<NavigationMenuLink
+						className={navigationMenuTriggerStyle()}
+						asChild
+					>
+						<Link to='/posts-transition'>Posts (transition)</Link>
 					</NavigationMenuLink>
 
 					{!isAuthorized && (

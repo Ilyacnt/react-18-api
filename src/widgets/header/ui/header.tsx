@@ -13,7 +13,7 @@ export function Header({ navigationSlot }: THeader) {
 		<header className='py-2 border-pink-600 border-b-2'>
 			<div className='flex items-center justify-between container mx-auto px-8 '>
 				<Link to={'/'}>
-					<span>Logo Here</span>
+					<span className='font-semibold leading-none tracking-tight'>Logo Here</span>
 				</Link>
 
 				<div className='flex items-center justify-around gap-4'>
