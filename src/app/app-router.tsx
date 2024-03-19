@@ -6,6 +6,7 @@ import { baseLayout } from './ui/base-layout';
 import { selectIsAuthorized } from '@/entities/session/model/session-selectors';
 import { PostsPageDeffered } from '@/pages/posts/ui/posts-page-deffered';
 import { PostsPageTransition } from '@/pages/posts/ui/posts-page-transition';
+import { PublicationPage } from '@/pages/publications/ui/publications-page';
 import { useAppSelector } from '@/shared/model/hooks';
 
 type TGuestGuardProps = {
@@ -40,6 +41,14 @@ export const appRouter = () =>
 						<AuthGuard>
 							<div>login</div>
 						</AuthGuard>
+					),
+				},
+				{
+					path: '/publications',
+					element: (
+						<GuestGuard>
+							<PublicationPage />
+						</GuestGuard>
 					),
 				},
 				{

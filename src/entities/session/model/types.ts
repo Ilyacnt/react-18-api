@@ -1,4 +1,4 @@
 export type TSession = {
 	accessToken: string;
-	userId: string;
+	userId: number;
 };

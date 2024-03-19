@@ -21,6 +21,12 @@ export function PagesNavigation() {
 						className={navigationMenuTriggerStyle()}
 						asChild
 					>
+						<Link to='/publications'>Publications (GQL)</Link>
+					</NavigationMenuLink>
+					<NavigationMenuLink
+						className={navigationMenuTriggerStyle()}
+						asChild
+					>
 						<Link to='/posts-deffered'>Posts (deffered)</Link>
 					</NavigationMenuLink>
 					<NavigationMenuLink

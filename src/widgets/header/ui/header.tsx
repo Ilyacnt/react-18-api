@@ -6,9 +6,10 @@ import { ThemeToggle } from '@/features/theme-toggle/ui/theme-toggle';
 
 type THeader = {
 	navigationSlot?: ReactElement;
+	userSlot?: ReactElement;
 };
 
-export function Header({ navigationSlot }: THeader) {
+export function Header({ navigationSlot, userSlot }: THeader) {
 	return (
 		<header className='py-2 border-pink-600 border-b-2'>
 			<div className='flex items-center justify-between container mx-auto px-8 '>
@@ -18,6 +19,7 @@ export function Header({ navigationSlot }: THeader) {
 
 				<div className='flex items-center justify-around gap-4'>
 					{navigationSlot}
+					{userSlot}
 					<ThemeToggle />
 				</div>
 			</div>
