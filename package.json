@@ -8,6 +8,8 @@
 		"dev": "vite",
 		"mock-server": "json-server --watch api_mock/data.cjs --routes api_mock/routes.json",
 		"graphql-mock-server": "json-graphql-server api_mock/graphql-db.cjs --p 3077",
+		"cypress:run": "cypress run",
+		"cypress:open": "cypress open",
 		"build": "tsc && vite build",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
@@ -46,6 +48,7 @@
 	"devDependencies": {
 		"@faker-js/faker": "^8.4.0",
 		"@feature-sliced/eslint-config": "^0.1.0-beta.6",
+		"@types/jest": "^29.5.12",
 		"@types/lodash.debounce": "^4.0.9",
 		"@types/node": "^20.11.16",
 		"@types/react": "^18.2.43",
@@ -55,6 +58,7 @@
 		"@vitejs/plugin-react": "^4.2.1",
 		"autoprefixer": "^10.4.17",
 		"concurrently": "^8.2.2",
+		"cypress": "^13.7.0",
 		"eslint": "^8.55.0",
 		"eslint-plugin-boundaries": "^4.2.0",
 		"eslint-plugin-import": "^2.29.1",
@@ -65,7 +69,7 @@
 		"postcss": "^8.4.33",
 		"tailwindcss": "^3.4.1",
 		"typescript": "^5.2.2",
-		"vite": "^5.0.8",
+		"vite": "4.5.2",
 		"vite-plugin-svgr": "^4.2.0"
 	}
 }

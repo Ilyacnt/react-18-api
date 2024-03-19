@@ -5,6 +5,7 @@
 		"lib": ["ES2020", "DOM", "DOM.Iterable"],
 		"module": "ESNext",
 		"skipLibCheck": true,
+		"types": ["cypress", "node"],
 
 		/* Bundler mode */
 		"moduleResolution": "bundler",
@@ -26,6 +27,6 @@
 			"@/*": ["./src/*"]
 		}
 	},
-	"include": ["src", "types"],
+	"include": ["src", "types", "cypress/support/component.ts"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }

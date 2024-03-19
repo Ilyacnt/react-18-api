@@ -76,6 +76,7 @@ export function PublicationCreate({ trigger }: TPublicationCreateProps) {
 									<FormLabel>Title</FormLabel>
 									<FormControl>
 										<Input
+											aria-label='Title input'
 											placeholder={field.name}
 											{...field}
 										/>
@@ -92,6 +93,7 @@ export function PublicationCreate({ trigger }: TPublicationCreateProps) {
 									<FormLabel>Body</FormLabel>
 									<FormControl>
 										<Textarea
+											aria-label='Body input'
 											className='h-32'
 											placeholder={field.name}
 											{...field}

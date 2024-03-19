@@ -38,6 +38,7 @@ export function PublicationPage() {
 						<Button
 							variant={'outline'}
 							size={'icon'}
+							aria-label='Create publication'
 						>
 							<Plus />
 						</Button>
@@ -48,6 +49,7 @@ export function PublicationPage() {
 					<Switch
 						checked={onlyMinePublications}
 						onCheckedChange={onFilterMinePublicationsChange}
+						aria-label='Show only mine publications'
 					/>
 				</span>
 			</div>

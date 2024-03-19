@@ -13,7 +13,10 @@ type TPublicationCardProps = {
 
 export const PublicationCard = ({ publication, editButtonSlot, deleteButtonSlot }: TPublicationCardProps) => {
 	return (
-		<Card className='w-full flex flex-col'>
+		<Card
+			className='w-full flex flex-col'
+			aria-label='Publication card'
+		>
 			<CardHeader className='justify-between h-full'>
 				<CardTitle className='flex items-center gap-2 text-lg justify-between'>
 					<p>{publication.title}</p>

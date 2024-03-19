@@ -11,7 +11,10 @@ type THeader = {
 
 export function Header({ navigationSlot, userSlot }: THeader) {
 	return (
-		<header className='py-2 border-pink-600 border-b-2'>
+		<header
+			className='py-2 border-pink-600 border-b-2'
+			aria-label='Header'
+		>
 			<div className='flex items-center justify-between container mx-auto px-8 '>
 				<Link to={'/'}>
 					<span className='font-semibold leading-none tracking-tight'>Logo Here</span>
