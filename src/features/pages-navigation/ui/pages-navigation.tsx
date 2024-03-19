@@ -16,7 +16,14 @@ export function PagesNavigation() {
 	return (
 		<NavigationMenu>
 			<NavigationMenuList>
-				<NavigationMenuItem>
+				{/* TODO: Add mobile menu */}
+				<NavigationMenuItem className='hidden gap-2 sm:flex'>
+					<NavigationMenuLink
+						className={navigationMenuTriggerStyle()}
+						asChild
+					>
+						<Link to='/publications'>Publications (GQL)</Link>
+					</NavigationMenuLink>
 					<NavigationMenuLink
 						className={navigationMenuTriggerStyle()}
 						asChild

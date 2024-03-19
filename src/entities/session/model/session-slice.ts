@@ -6,10 +6,12 @@ import { ESliceName } from '@/shared/api/constants';
 type SessionSliceState = {
 	isAuthorized: boolean;
 	accessToken?: string;
-	userId?: string;
+	userId?: number;
 };
 
+// TODO: Make auth
 const initialState: SessionSliceState = {
+	userId: 1,
 	isAuthorized: true,
 };
 

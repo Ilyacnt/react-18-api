@@ -2,6 +2,7 @@ const API = 'api';
 const API_VERSION = 'v1';
 
 export const API_BASE_URL = `${import.meta.env.VITE_API_BASE}/${API}/${API_VERSION}`;
+export const API_BASE_URL_GRAPHQL = import.meta.env.VITE_API_BASE_GRAPHQL;
 
 export enum EMethodHTTP {
 	GET = 'GET',

@@ -1,3 +1,4 @@
+import { UserAccountBadge } from '@/entities/session/ui/user-account-badge';
 import { PagesNavigation } from '@/features/pages-navigation/ui/pages-navigation';
 import { BaseLayout } from '@/shared/ui/base-layout';
 import { Header } from '@/widgets/header/ui/header';
@@ -11,4 +12,13 @@ import { Header } from '@/widgets/header/ui/header';
  * (2) Avoid cross-import using slot (render prop) pattern
  * Pass widgets as props to layout
  */
-export const baseLayout = <BaseLayout headerSlot={<Header navigationSlot={<PagesNavigation />} />} />;
+export const baseLayout = (
+	<BaseLayout
+		headerSlot={
+			<Header
+				navigationSlot={<PagesNavigation />}
+				userSlot={<UserAccountBadge />}
+			/>
+		}
+	/>
+);
