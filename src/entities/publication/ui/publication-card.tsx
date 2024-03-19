@@ -14,7 +14,7 @@ type TPublicationCardProps = {
 export const PublicationCard = ({ publication, editButtonSlot, deleteButtonSlot }: TPublicationCardProps) => {
 	return (
 		<Card className='w-full flex flex-col'>
-			<CardHeader>
+			<CardHeader className='justify-between h-full'>
 				<CardTitle className='flex items-center gap-2 text-lg justify-between'>
 					<p>{publication.title}</p>
 					<div className='flex gap-3'>
@@ -29,7 +29,7 @@ export const PublicationCard = ({ publication, editButtonSlot, deleteButtonSlot 
 						Views: {publication.views} <Eye className='w-5 h-5' />
 					</span>
 					<span className='flex gap-1 items-center'>
-						Author: {publication.User?.name} <Person className='w-5 h-5' />
+						Author: {publication.User?.name} ({publication.user_id}) <Person className='w-5 h-5' />
 					</span>
 				</CardDescription>
 			</CardHeader>

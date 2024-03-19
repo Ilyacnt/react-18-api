@@ -1,9 +1,13 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 
+import { useMutation } from '@apollo/client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 
 import { TPublicationCreateFormSchema, publicationCreateFormSchema } from '../model/types';
+import { useAppSelector } from '@/app/app-store';
+import { CREATE_PUBLICATION_GQL, TCreatePublicationReturnType } from '@/entities/publication/api/publication-api';
+import { selectUserId } from '@/entities/session/model/session-selectors';
 import { Button } from '@/shared/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/shared/ui/dialog';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/shared/ui/form';
@@ -15,18 +19,44 @@ type TPublicationCreateProps = {
 };
 
 export function PublicationCreate({ trigger }: TPublicationCreateProps) {
+	const [open, setOpen] = useState<boolean>(false);
+
+	const [createPublication] = useMutation<TCreatePublicationReturnType>(CREATE_PUBLICATION_GQL, {
+		refetchQueries: ['getAllPublications'],
+	});
+
+	const userId = useAppSelector(selectUserId);
+
 	const form = useForm<TPublicationCreateFormSchema>({
 		defaultValues: { title: '', body: '' },
 		resolver: zodResolver(publicationCreateFormSchema),
 	});
 
-	// TODO: Обработать mutation на submit
-	const onPublicationCreateSubmit = (data: TPublicationCreateFormSchema) => {
-		console.log(data);
+	const onPublicationCreateSubmit = async (data: TPublicationCreateFormSchema) => {
+		try {
+			const result = await createPublication({
+				variables: {
+					id: 1231,
+					title: data.title,
+					body: data.body,
+					views: 1,
+					user_id: userId,
+				},
+			});
+
+			console.log(result.data);
+
+			setOpen(false);
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	return (
-		<Dialog>
+		<Dialog
+			open={open}
+			onOpenChange={setOpen}
+		>
 			<DialogTrigger>{trigger}</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>

@@ -5,19 +5,19 @@ module.exports = {
 			title: 'Getting Started with GraphQL',
 			body: 'Learn how to easily setup a GraphQL Server with NodeJS and build a CRUD app that speaks GraphQL.',
 			views: 150,
-			user_id: 123,
+			user_id: 1,
 		},
 		{
 			id: 2,
 			title: 'Advanced GraphQL Techniques',
 			body: 'Explore advanced GraphQL techniques such as pagination, authentication, and error handling.',
 			views: 80,
-			user_id: 456,
+			user_id: 2,
 		},
 	],
 	users: [
-		{ id: 123, name: 'Caroline Baker', publication_ids: [1] },
-		{ id: 456, name: 'Jane Doe', publication_ids: [2] },
+		{ id: 1, name: 'Caroline Baker', publication_ids: [1] },
+		{ id: 2, name: 'Jane Doe', publication_ids: [2] },
 	],
 	comments: [
 		{
